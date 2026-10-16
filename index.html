@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Latinas Design · Moda femenina en Cochabamba</title>
+<meta name="description" content="Latinas Design: moda femenina en Cochabamba. Tops, jeans, vestidos, conjuntos y chaquetas. 3 tiendas. Pide por WhatsApp.">
+<meta name="theme-color" content="#b0125b">
+<meta property="og:title" content="Latinas Design · Empowered Latina">
+<meta property="og:description" content="Moda femenina en Cochabamba. Elige tu prenda y pídela por WhatsApp.">
+<!-- DEPLOY STEP: reemplazar DOMINIO por la URL real del sitio -->
+<meta property="og:url" content="https://DOMINIO/">
+<meta property="og:image" content="https://DOMINIO/assets/hero-poster.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23b0125b'/%3E%3Ccircle cx='32' cy='32' r='24' fill='none' stroke='%23e6c27a' stroke-width='2'/%3E%3Ctext x='32' y='42' font-family='Georgia' font-size='26' fill='%23e6c27a' text-anchor='middle' font-style='italic'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Allura&family=Italiana&family=Jost:wght@300;400;500&display=swap">
+<style>
+/* Concepto: la seda magenta del letrero cae sobre el mármol de la tienda; la página vive en rosa empolvado con hilos de oro como el trazo del logo */
+:root{
+  --canvas:#f7eeef; --panel:#fffafa; --deep:#2b0f1d;
+  --accent:#b0125b; --accent-hover:#8f0c49; --accent-muted:#ecc1d2;
+  --gold:#a67a33; --gold-soft:#e6c27a;
+  --text-primary:#2a1620; --text-secondary:#6c5260; --line:#e7d3da; --line-strong:#9c7d8a;
+  --wa:#1f8a4c;
+  --display:"Italiana","Didot","Bodoni MT",Georgia,serif;
+  --script:"Allura","Snell Roundhand","Brush Script MT",cursive;
+  --body:"Jost","Futura","Century Gothic",system-ui,sans-serif;
+  --ease:cubic-bezier(.22,.8,.24,1); --ease-soft:cubic-bezier(.4,0,.2,1);
+  --tshadow:0 1px 2px rgba(30,6,18,.9),0 3px 12px rgba(30,6,18,.7),0 10px 44px rgba(30,6,18,.65);
+}
+*{box-sizing:border-box}
+html{overflow-x:hidden;overflow-x:clip;scroll-behavior:smooth}
+body{margin:0;overflow-x:hidden;overflow-x:clip;background:var(--canvas);color:var(--text-primary);font-family:var(--body);font-weight:400;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;animation:pagein .9s var(--ease) both}
+@keyframes pagein{from{opacity:0}to{opacity:1}}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--panel);padding:8px 14px;z-index:50}
+.skip:focus{left:12px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.kicker{font-size:.74rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:.01em}
+h2{font-size:clamp(2.4rem,5vw,3.8rem)}
+.script{font-family:var(--script);font-weight:400;color:var(--accent);letter-spacing:0}
+
+/* fondo vivo: un brillo dorado que deriva muy lento */
+.ambient{position:fixed;inset:-20%;z-index:-1;pointer-events:none;background:radial-gradient(40% 35% at 20% 30%,rgba(230,194,122,.16),transparent 70%),radial-gradient(35% 30% at 80% 70%,rgba(176,18,91,.07),transparent 70%);animation:drift 80s linear infinite alternate;animation-delay:-20s}
+@keyframes drift{to{transform:translate(6%,-4%) rotate(8deg)}}
+
+/* botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:500 .95rem var(--body);letter-spacing:.04em;text-decoration:none;border-radius:999px;padding:14px 26px;border:0;cursor:pointer;transition:background .35s var(--ease-soft),transform .35s var(--ease),box-shadow .35s var(--ease-soft),color .35s var(--ease-soft),border-color .35s var(--ease-soft)}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-wa{background:var(--accent);color:#fff;box-shadow:0 10px 28px -12px rgba(176,18,91,.7)}
+.btn-wa:hover{background:var(--accent-hover);transform:translateY(-2px)}
+.btn-line{border:1px solid var(--line-strong);color:var(--text-primary);background:transparent}
+.btn-line:hover{border-color:var(--accent);color:var(--accent)}
+.btn-light{border:1px solid rgba(255,255,255,.65);color:#fff;background:transparent}
+.btn-light:hover{background:rgba(255,255,255,.12)}
+@media (pointer:coarse){.btn{min-height:46px}}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:20;padding-top:env(safe-area-inset-top,0px);transition:background .5s var(--ease-soft),box-shadow .5s var(--ease-soft)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:44px;height:44px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 1px rgba(184,137,63,.5)}
+.brand span{font-family:var(--script);font-size:2rem;line-height:1;color:#fff;text-shadow:0 1px 8px rgba(30,6,18,.5);transition:color .5s}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a.l{text-decoration:none;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;text-shadow:0 1px 8px rgba(30,6,18,.5);transition:color .3s}
+.nav.solid{background:rgba(247,238,239,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+.nav.solid .brand span{color:var(--accent);text-shadow:none}
+.nav.solid .nav-links a.l{color:var(--text-secondary);text-shadow:none}
+.nav.solid .nav-links a.l:hover{color:var(--accent)}
+.nav .btn{padding:10px 18px;font-size:.85rem}
+@media (max-width:760px){.nav-links a.l{display:none}}
+
+/* HERO: el video avanza con el scroll */
+.hero{position:relative;height:420vh;background:var(--deep)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.poster,.stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background-size:cover;background-position:center}
+.stage video{opacity:0;transition:opacity .8s var(--ease-soft);will-change:transform;transform:translateZ(0)}
+.stage.video-ready video{opacity:1}
+.scrim{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 120% 90% at 50% 45%,rgba(40,8,22,0) 35%,rgba(40,8,22,.6) 100%),linear-gradient(180deg,rgba(40,8,22,.45),rgba(40,8,22,0) 22%)}
+.band{position:absolute;color:#fff;text-shadow:var(--tshadow);opacity:0}
+.band::before{content:"";position:absolute;inset:-30% -18%;z-index:-1;pointer-events:none;opacity:calc(.25 + .75*var(--k,1));background:radial-gradient(ellipse 60% 58% at 50% 50%,rgba(40,8,22,.72) 0%,rgba(40,8,22,.5) 46%,rgba(40,8,22,0) 76%)}
+.band .btn{text-shadow:none}
+.b1{left:max(6vw,24px);top:24vh;width:min(520px,36vw)}
+.b2{right:max(6vw,24px);top:30vh;width:min(440px,32vw);text-align:right}
+.b2 p{margin-left:auto}
+.b3{left:0;right:0;top:12vh;margin:0 auto;width:min(760px,90vw);text-align:center}
+.band h1,.band h2{font-size:clamp(2.8rem,5.2vw,4.8rem)}
+.band p{font-size:clamp(1.05rem,1.35vw,1.22rem);font-weight:300;margin:16px 0 0;max-width:30ch}
+.b3 p{margin-inline:auto}
+.band .script{color:var(--gold-soft);font-size:1.2em;line-height:.9}
+.w{display:inline-block;--kc:clamp(0,(var(--k,0) - var(--th,0))*2.8,1);opacity:var(--kc);transform:translateY(calc((1 - var(--kc))*-22px))}
+.b3 .w{transform:translateY(calc((1 - var(--kc))*26px))}
+.b3 .sub{--ks:clamp(0,(var(--k,0) - .62)*4,1);opacity:var(--ks)}
+.b3 .cta{--kb:clamp(0,(var(--k,0) - .76)*5,1);opacity:var(--kb);transform:translateY(calc((1 - var(--kb))*12px));margin-top:26px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.cue{position:absolute;left:50%;bottom:calc(26px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);color:#fff;display:grid;place-items:center;gap:6px;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;opacity:.85;transition:opacity .5s}
+.ring{width:40px;height:40px;transform:rotate(-90deg)}
+.chev{width:22px;height:22px;animation:bob 2.4s var(--ease-soft) infinite}
+@keyframes bob{50%{transform:translateY(5px)}}
+@media (max-height:560px){.cue{display:none}}
+
+/* hero estático: celulares, tablets en vertical, movimiento reducido */
+.static-hero{display:none}
+@media (max-width: 720px), (orientation: portrait) and (max-width: 1024px), (orientation: portrait) and (pointer: coarse), (orientation: landscape) and (pointer: coarse) and (max-height: 560px), (prefers-reduced-motion: reduce){
+  .hero{display:none}
+  .static-hero{display:flex;position:relative;min-height:92vh;min-height:92svh;align-items:flex-end;background:var(--deep) url('assets/hero-poster.jpg') 52% center/cover;color:#fff;padding-block:120px 56px}
+  .static-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,8,22,.35) 0%,rgba(40,8,22,.08) 35%,rgba(40,8,22,.85) 100%)}
+  .static-hero .wrap{position:relative;width:100%}
+  .static-hero h1{font-size:clamp(2.8rem,11vw,4.4rem);text-shadow:var(--tshadow)}
+  .static-hero .script{color:var(--gold-soft);display:block;font-size:1.2em;line-height:.9}
+  .static-hero p{font-weight:300;font-size:1.1rem;max-width:30ch;margin:14px 0 26px;text-shadow:var(--tshadow)}
+}
+
+/* hilo dorado que se dibuja entre secciones */
+.thread{display:block;width:min(560px,80%);height:60px;margin:0 auto;overflow:visible}
+.thread path{fill:none;stroke:var(--gold);stroke-width:1.2;stroke-linecap:round;stroke-dasharray:var(--len,900);stroke-dashoffset:calc(var(--len,900) * (1 - var(--d,0)))}
+
+section{padding-block:96px}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* manifiesto */
+.manifest{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.manifest .copy{min-width:0}
+.manifest .photo{position:relative}
+.manifest .photo img{border-radius:220px 220px 6px 6px;aspect-ratio:3/4;object-fit:cover;width:100%}
+.manifest .photo::after{content:"";position:absolute;inset:-14px;border:1px solid var(--gold);border-radius:232px 232px 10px 10px;opacity:.5;pointer-events:none}
+.manifest p{color:var(--text-secondary);max-width:46ch;font-size:1.08rem}
+.facts{display:flex;gap:40px;flex-wrap:wrap;margin-top:32px;align-items:baseline}
+.facts b{display:block;font-family:var(--display);font-weight:400;font-size:2.6rem;color:var(--accent);line-height:1}
+.facts span{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-secondary)}
+@media (max-width:860px){.manifest{grid-template-columns:1fr;gap:44px}.manifest .photo{max-width:420px;margin:0 auto;width:100%}}
+
+/* catálogo */
+.cat-head{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:22px;margin-bottom:36px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:400 .88rem var(--body);letter-spacing:.04em;padding:9px 18px;border-radius:999px;border:1px solid var(--line-strong);background:transparent;color:var(--text-primary);cursor:pointer;transition:background .3s,color .3s,border-color .3s}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:34px 22px}
+@media (max-width:1020px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:720px){.grid{grid-template-columns:repeat(2,1fr);gap:26px 14px}}
+.item{display:flex;flex-direction:column;gap:10px;min-width:0}
+.item .ph{position:relative;overflow:hidden;border-radius:4px;aspect-ratio:4/5;background:var(--accent-muted)}
+.item .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.item:hover .ph img{transform:scale(1.04)}
+.item .tag{position:absolute;top:10px;left:10px;background:var(--accent);color:#fff;font-size:.66rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
+.item h3{font-family:var(--body);font-size:1rem;font-weight:500;line-height:1.3;letter-spacing:0;min-width:0}
+.item .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.price{font-family:var(--display);font-size:1.35rem;color:var(--accent);white-space:nowrap;font-variant-numeric:tabular-nums}
+.item .meta{font-size:.82rem;color:var(--text-secondary);line-height:1.45}
+.item .btn{padding:10px 12px;font-size:.84rem;margin-top:auto}
+@media (max-width:420px){.item .row{flex-direction:column;gap:2px}.item .lg{display:none}}
+.grid .item{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.grid.in .item{opacity:1;transform:none}
+.cat-more{text-align:center;margin-top:48px;color:var(--text-secondary)}
+.cat-more .btn{margin-top:6px}
+
+/* cómo pedir */
+.how{background:var(--deep);color:#f6e6ec}
+.how .kicker{color:var(--gold-soft)}
+.how h2{color:#fff}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);margin-top:54px;border-top:1px solid rgba(230,194,122,.3)}
+.step{padding:34px 30px 8px 0}
+.step+.step{padding-left:30px;border-left:1px solid rgba(230,194,122,.3)}
+.step b{font-family:var(--display);font-weight:400;font-size:3.4rem;color:var(--gold-soft);line-height:1}
+.step h3{font-family:var(--body);font-weight:500;font-size:1.12rem;margin:14px 0 6px;letter-spacing:0}
+.step p{margin:0;color:#d9bfcb;font-weight:300}
+.steps .step:nth-child(2){transition-delay:.12s}
+.steps .step:nth-child(3){transition-delay:.24s}
+.steps.done .step:nth-child(n){transition-delay:0s}
+@media (max-width:760px){.steps{grid-template-columns:1fr}.step,.step+.step{padding:26px 0 0;border-left:0}.step+.step{border-top:1px solid rgba(230,194,122,.3);margin-top:22px}}
+
+/* el sello: momento interactivo */
+.sign{text-align:center}
+.sign-btn{position:relative;display:inline-grid;place-items:center;width:220px;height:220px;border-radius:50%;border:0;padding:0;background:var(--panel);cursor:pointer;margin-top:30px;box-shadow:0 20px 50px -26px rgba(176,18,91,.45);-webkit-user-select:none;user-select:none;touch-action:none;-webkit-touch-callout:none}
+.sign-btn img{width:180px;height:180px;border-radius:50%;object-fit:cover;opacity:calc(.5 + .5*var(--h,0));pointer-events:none}
+.sign-btn svg{position:absolute;left:-10px;top:-10px;width:240px;height:240px;transform:rotate(-90deg);pointer-events:none}
+.sign-btn circle{fill:none;stroke:var(--gold);stroke-width:2;stroke-dasharray:723;stroke-dashoffset:calc(723 * (1 - var(--h,0)))}
+.sign-hint{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-secondary);margin-top:24px}
+.sign-msg{font-family:var(--display);font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.2;max-width:24ch;margin:18px auto 0;opacity:0;transform:translateY(10px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.sign.done .sign-msg{opacity:1;transform:none}
+
+/* tiendas */
+.stores{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+@media (max-width:920px){.stores{grid-template-columns:1fr;max-width:560px;margin:0 auto}}
+.store{background:var(--panel);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 0 var(--line)}
+.store .ph{aspect-ratio:4/3;overflow:hidden}
+.store .ph img{width:100%;height:100%;object-fit:cover;object-position:center 30%;transition:transform 1.2s var(--ease)}
+.store:hover .ph img{transform:scale(1.04)}
+.store .in{padding:24px 24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.store h3{font-size:2rem}
+.store p{margin:0;color:var(--text-secondary);font-size:.95rem}
+.store .acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:10px}
+.store .btn{padding:11px 18px;font-size:.85rem}
+
+/* preguntas */
+.faq{max-width:780px;margin:0 auto}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:22px 0;font-size:1.08rem;font-weight:500}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";width:10px;height:10px;flex:none;border-right:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);transform:rotate(45deg);transition:transform .4s var(--ease)}
+.faq details[open] summary::after{transform:rotate(225deg)}
+.faq details p{margin:0 0 22px;color:var(--text-secondary);max-width:62ch}
+
+/* cierre */
+.close{position:relative;text-align:center;color:#fff;background:var(--deep) url('assets/hero-ending.jpg') center/cover;padding-block:150px}
+.close::before{content:"";position:absolute;inset:0;background:rgba(40,8,22,.66)}
+.close .wrap{position:relative}
+.close h2{font-size:clamp(2.6rem,6vw,4.6rem);text-shadow:var(--tshadow)}
+.close .script{color:var(--gold-soft)}
+.close p{font-weight:300;margin:16px auto 30px;max-width:40ch;text-shadow:var(--tshadow)}
+
+footer{padding-block:44px calc(110px + env(safe-area-inset-bottom,0px));color:var(--text-secondary);font-size:.88rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:baseline}
+footer .script{font-size:1.8rem}
+
+.float{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:19;width:60px;height:60px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 10px 26px rgba(31,138,76,.45);transition:transform .4s var(--ease)}
+.float:hover{transform:scale(1.07)}
+.float svg{width:30px;height:30px}
+.float::after{content:"";position:absolute;inset:0;border-radius:50%;animation:ping 4.5s var(--ease-soft) infinite;animation-delay:-1.4s}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(31,138,76,.45)}60%,100%{box-shadow:0 0 0 18px rgba(31,138,76,0)}}
+
+body.paused *,body.paused *::before,body.paused *::after{animation-play-state:paused!important}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important;transition-delay:0s!important}
+  .reveal,.grid .item{opacity:1;transform:none}
+  .thread path{stroke-dashoffset:0}
+  .sign-msg{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="ambient" aria-hidden="true"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.6-.3Z"/></symbol></svg>
+
+<nav class="nav" id="nav" aria-label="Principal">
+  <div class="wrap">
+    <a class="brand" href="#inicio"><img src="assets/logo-sm.jpg" alt="Logo de Latinas Design" width="44" height="44"><span>Latinas</span></a>
+    <div class="nav-links">
+      <a class="l" href="#catalogo">Catálogo</a>
+      <a class="l" href="#tiendas">Tiendas</a>
+      <a class="l" href="#preguntas">Preguntas</a>
+      <a class="btn btn-wa" data-wa="Hola Latinas Design, quiero hacer un pedido" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+    </div>
+  </div>
+</nav>
+
+<header id="inicio">
+  <div class="hero" id="hero">
+    <div class="stage" id="stage">
+      <div class="poster" id="poster"></div>
+      <video id="video" preload="none" muted playsinline aria-hidden="true" tabindex="-1"></video>
+      <div class="scrim" aria-hidden="true"></div>
+
+      <div class="band b1" data-a="0" data-b="0.30">
+        <h1><span class="sr">Empowered Latina. Moda para la mujer que se viste para ella.</span><span aria-hidden="true" class="split"><span class="script">Empowered</span> Latina.</span></h1>
+        <p class="w" style="--th:.4" aria-hidden="true">Moda para la mujer que se viste para ella.</p>
+      </div>
+      <div class="band b2" data-a="0.34" data-b="0.62">
+        <h2><span class="sr">Vístete para ti.</span><span aria-hidden="true" class="split">Vístete para ti.</span></h2>
+        <p class="w" style="--th:.45">Tops, jeans, vestidos, conjuntos y chaquetas en tres tiendas de Cochabamba.</p>
+      </div>
+      <div class="band b3" data-a="0.68" data-b="1">
+        <h2><span class="sr">Elige. Escríbenos. Es tuyo.</span><span aria-hidden="true" class="split">Elige. Escríbenos. Es tuyo.</span></h2>
+        <p class="sub">Mira la colección y pide tu prenda por WhatsApp. Te confirmamos talla y color al toque.</p>
+        <div class="cta">
+          <a class="btn btn-wa" data-wa="Hola Latinas Design, quiero hacer un pedido" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>Pedir por WhatsApp</a>
+          <a class="btn btn-light" href="#catalogo">Ver catálogo</a>
+        </div>
+      </div>
+
+      <div class="cue" id="cue" aria-hidden="true">
+        <svg class="ring" viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="2"/><circle id="ringfill" cx="24" cy="24" r="20" fill="none" stroke="#e6c27a" stroke-width="2" stroke-dasharray="126" style="stroke-dashoffset:var(--ld,126)"/></svg>
+        <span>Desliza</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="static-hero">
+    <div class="wrap">
+      <h1><span class="script">Empowered</span> Latina.</h1>
+      <p>Moda para la mujer que se viste para ella. Elige tu prenda y pídela por WhatsApp.</p>
+      <a class="btn btn-wa" data-wa="Hola Latinas Design, quiero hacer un pedido" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>Pedir por WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <section>
+    <div class="wrap manifest">
+      <div class="copy reveal">
+        <div class="kicker">Latinas Design · Cochabamba</div>
+        <h2 style="margin-top:14px">Ropa que te hace sentir <span class="script">poderosa</span></h2>
+        <p style="margin-top:22px">Somos una tienda de moda femenina para la latina que se viste para ella misma. Traemos prendas de temporada a precios que sí se pueden: tops desde Bs. 60, jeans desde Bs. 100 y conjuntos completos.</p>
+        <p>Pruébate todo en cualquiera de nuestras tres tiendas, o pídelo por WhatsApp sin salir de casa.</p>
+        <div class="facts">
+          <div><b>3</b><span>tiendas</span></div>
+          <div><b>36 al 44</b><span>tallas en jeans</span></div>
+          <div><b>Bs. 60</b><span>desde</span></div>
+        </div>
+      </div>
+      <div class="photo reveal"><img src="assets/interior.jpg" alt="Interior de la tienda Latinas Design con arcos, piso de mármol y percheros con ropa" loading="lazy" width="1100" height="1508"></div>
+    </div>
+  </section>
+
+  <svg class="thread" viewBox="0 0 560 60" aria-hidden="true"><path d="M2 30 C 90 -6, 150 66, 240 30 S 380 -4, 430 30 S 520 52, 558 22"/></svg>
+
+  <section id="catalogo">
+    <div class="wrap">
+      <div class="cat-head">
+        <div><div class="kicker">Colección</div><h2 style="margin-top:10px">Catálogo</h2></div>
+        <div class="chips" id="chips" role="group" aria-label="Filtrar por categoría"></div>
+      </div>
+      <div class="grid" id="grid"></div>
+      <div class="cat-more">
+        <p>Tenemos muchas más prendas y colores en tienda.</p>
+        <a class="btn btn-line" id="catalog-link" href="#" target="_blank" rel="noopener">Ver el catálogo completo en WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="how">
+    <div class="wrap">
+      <div class="kicker">Comprar es fácil</div>
+      <h2 style="margin-top:10px">Así haces tu pedido</h2>
+      <div class="steps" id="steps">
+        <div class="step reveal"><b>1</b><h3>Elige tu prenda</h3><p>Toca “Pedir por WhatsApp” en la prenda que te gustó. El mensaje ya va con el nombre y el precio.</p></div>
+        <div class="step reveal"><b>2</b><h3>Confirma talla y color</h3><p>Te respondemos con fotos reales y te ayudamos a elegir tu talla.</p></div>
+        <div class="step reveal"><b>3</b><h3>Recógela o recíbela</h3><p>Pasa por la tienda que te quede más cerca, o coordina la entrega con nosotras por WhatsApp.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sign" id="sello">
+    <div class="wrap">
+      <div class="kicker">Nuestro sello</div>
+      <h2 style="margin-top:10px">Mantén presionado el sello</h2>
+      <button type="button" class="sign-btn" id="signbtn" aria-label="Mantén presionado para descubrir nuestro mensaje">
+        <svg viewBox="0 0 240 240" aria-hidden="true"><circle cx="120" cy="120" r="115"/></svg>
+        <img src="assets/logo.jpg" alt="" width="180" height="180">
+      </button>
+      <div class="sign-hint" id="signhint">Presiona y no sueltes</div>
+      <p class="sign-msg" id="signmsg">Cada prenda está elegida para que te mires al espejo y digas: esta soy yo.</p>
+    </div>
+  </section>
+
+  <svg class="thread" viewBox="0 0 560 60" aria-hidden="true"><path d="M2 22 C 60 52, 140 2, 220 30 S 360 60, 420 26 S 520 6, 558 34"/></svg>
+
+  <section id="tiendas">
+    <div class="wrap">
+      <div class="cat-head"><div><div class="kicker">Visítanos</div><h2 style="margin-top:10px">Nuestras 3 tiendas</h2></div></div>
+      <div class="stores" id="stores"></div>
+    </div>
+  </section>
+
+  <section id="preguntas" style="padding-top:20px">
+    <div class="wrap">
+      <div style="text-align:center;margin-bottom:30px"><div class="kicker">Antes de pedir</div><h2 style="margin-top:10px">Preguntas frecuentes</h2></div>
+      <div class="faq">
+        <details><summary>¿Tienen mi talla?</summary><p>Cada prenda indica sus tallas: los jeans van del 36 al 44 y los tops de S a L. Escríbenos por WhatsApp con tu talla y te confirmamos qué hay disponible.</p></details>
+        <details><summary>¿Qué colores hay?</summary><p>La mayoría de las prendas viene en varios colores. Los ves en la descripción de cada una, y por WhatsApp te mandamos fotos de cada tono.</p></details>
+        <details><summary>¿Puedo probármela antes de comprar?</summary><p>Sí. Ven a cualquiera de nuestras tres tiendas en Cochabamba y pruébate lo que quieras.</p></details>
+        <details><summary>¿Cómo hago el pedido?</summary><p>Toca “Pedir por WhatsApp” en la prenda. Te llega el mensaje con el nombre y el precio, y desde ahí coordinamos talla, color y cómo la recibes.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="close">
+    <div class="wrap">
+      <h2>Tu próxima prenda favorita<br>está a un <span class="script">mensaje</span></h2>
+      <p>Escríbenos y te ayudamos a armar tu look.</p>
+      <a class="btn btn-wa" data-wa="Hola Latinas Design, quiero ayuda para elegir mi look" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>Escribir por WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><span class="script">Latinas Design</span><br>Empowered Latina · Cochabamba, Bolivia</div>
+    <div>WhatsApp <span id="wa-num"></span></div>
+  </div>
+</footer>
+
+<a class="float" data-wa="Hola Latinas Design, tengo una consulta" href="#" aria-label="Escríbenos por WhatsApp"><svg aria-hidden="true"><use href="#wa"/></svg></a>
+
+<script>
+// ===== DATOS DE LA TIENDA (editar aquí) =====
+const WHATSAPP = "59169451551";
+const CATALOGO_WA = "https://wa.me/c/59169451551";
+const PRODUCTOS = [
+  {slug:"conjunto-lino",nombre:"Conjunto de lino",cat:"Conjuntos",precio:260,tallas:"S, M y L",detalle:"Negro, camel, hueso, fucsia y lavanda"},
+  {slug:"vestido-floreado",nombre:"Vestido corto floreado",cat:"Vestidos y faldas",precio:185,tallas:"Talla estándar",detalle:"Varios modelos y colores"},
+  {slug:"polera-empowered-latina",nombre:"Polera oversize “Empowered Latina”",cat:"Tops",precio:85,tallas:"S, M y L",detalle:"Lila, plomo, negro, kaki y verde cemento"},
+  {slug:"jeans-wide-leg-verde",nombre:"Wide leg jeans verde",cat:"Pantalones",precio:100,tallas:"36, 38, 40 y 42",detalle:""},
+  {slug:"crop-top-nerea",nombre:"Crop top “Nerea”",cat:"Tops",precio:60,tallas:"S y M",detalle:"Blanco, celeste, verde y café"},
+  {slug:"shorts-sastreros",nombre:"Shorts sastreros",cat:"Pantalones",precio:130,tallas:"36 al 42",detalle:"Varios colores"},
+  {slug:"bodys",nombre:"Bodys efecto lipo",cat:"Tops",precio:115,tallas:"Talla estándar",detalle:"Varios colores"},
+  {slug:"falda-midi",nombre:"Falda midi",cat:"Vestidos y faldas",precio:145,tallas:"36 al 42",detalle:""},
+  {slug:"mom-jeans-negro",nombre:"Mom jeans negro con rotos",cat:"Pantalones",precio:165,tallas:"36 al 44",detalle:""},
+  {slug:"chaqueta-corderito",nombre:"Chaqueta oversize con corderito",cat:"Chaquetas",precio:265,tallas:"M y L",detalle:""},
+  {slug:"chaqueta-negra-rotos",nombre:"Chaqueta oversize negra con rotos",cat:"Chaquetas",precio:150,tallas:"S",detalle:"",tag:"Oferta"},
+  {slug:"joggers-algodon",nombre:"Joggers 100% algodón",cat:"Pantalones",precio:80,tallas:"M",detalle:"",tag:"Liquidación"},
+];
+const TIENDAS = [
+  {nombre:"Av. Santa Cruz",foto:"santa-cruz",alt:"Fachada de mármol gris de la tienda Latinas Design en la Av. Santa Cruz",texto:"Ven a probarte la colección.",maps:"https://maps.app.goo.gl/Ht5RovSsRHneaNAZ6"},
+  {nombre:"Av. Beijing",foto:"beijing",alt:"Inauguración de la tienda Latinas Design en la Av. Beijing con un arco de globos blancos y dorados",texto:"Ven a probarte la colección.",maps:"https://maps.app.goo.gl/8ZxQ9EFJ2zZQzkLLA"},
+  {nombre:"Centro",foto:"centro",alt:"Letrero circular magenta y dorado de Latinas Design en el centro",texto:"Ven a probarte la colección.",maps:"https://maps.app.goo.gl/Jbu5pjV2WX5UK3kq8"},
+];
+// ============================================
+
+const waLink = m => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(m)}`;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const icon = '<svg aria-hidden="true"><use href="#wa"/></svg>';
+const clamp = (v,lo,hi) => Math.min(hi, Math.max(lo, v));
+const RM = matchMedia("(prefers-reduced-motion: reduce)");
+document.querySelectorAll("[data-wa]").forEach(a => { a.href = waLink(a.dataset.wa); a.target = "_blank"; a.rel = "noopener"; });
+document.getElementById("catalog-link").href = CATALOGO_WA;
+document.getElementById("wa-num").textContent = "+591 " + WHATSAPP.slice(3);
+
+// catálogo
+const grid = document.getElementById("grid"), chips = document.getElementById("chips");
+function render(cat){
+  grid.innerHTML = PRODUCTOS.filter(p => cat === "Todo" || p.cat === cat).map((p,i) => `
+    <article class="item" style="transition-delay:${Math.min(i,7)*70}ms">
+      <div class="ph">${p.tag?`<span class="tag">${esc(p.tag)}</span>`:""}<img src="assets/catalogo/${p.slug}.jpg" alt="${esc(p.nombre)}" loading="lazy" width="800" height="1000"></div>
+      <div class="row"><h3>${esc(p.nombre)}</h3><span class="price">Bs. ${p.precio}</span></div>
+      <div class="meta">Tallas: ${esc(p.tallas)}${p.detalle?`<br>${esc(p.detalle)}`:""}</div>
+      <a class="btn btn-wa" target="_blank" rel="noopener" href="${waLink(`Hola Latinas Design, me interesa: ${p.nombre} (Bs. ${p.precio}). ¿Tienen en mi talla?`)}">${icon}Pedir<span class="lg"> por WhatsApp</span></a>
+    </article>`).join("");
+  setTimeout(() => grid.querySelectorAll(".item").forEach(el => el.style.transitionDelay = "0ms"), 1400);
+}
+const cats = ["Todo", ...new Set(PRODUCTOS.map(p => p.cat))];
+chips.innerHTML = cats.map((c,i) => `<button type="button" class="chip" id="chip-${i}" aria-pressed="${i===0}">${c}</button>`).join("");
+chips.addEventListener("click", e => { const b = e.target.closest(".chip"); if(!b) return; chips.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x===b)); render(b.textContent); });
+render("Todo");
+
+// tiendas
+document.getElementById("stores").innerHTML = TIENDAS.map(t => `
+  <article class="store reveal">
+    <div class="ph"><img src="assets/tiendas/${t.foto}.jpg" alt="${esc(t.alt)}" loading="lazy" width="1000" height="1150"></div>
+    <div class="in">
+      <div class="kicker">Tienda</div>
+      <h3>${esc(t.nombre)}</h3>
+      <p>${esc(t.texto)}</p>
+      <div class="acts">
+        <a class="btn btn-line" target="_blank" rel="noopener" href="${t.maps}">Cómo llegar</a>
+        <a class="btn btn-wa" target="_blank" rel="noopener" href="${waLink(`Hola Latinas Design, tengo una consulta sobre la tienda de ${t.nombre}`)}">${icon}WhatsApp</a>
+      </div>
+    </div>
+  </article>`).join("");
+
+// entradas al hacer scroll
+const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), {threshold:.15});
+document.querySelectorAll(".reveal, .grid").forEach(el => io.observe(el));
+setTimeout(() => document.getElementById("steps").classList.add("done"), 6000);
+
+// hilos dorados que se dibujan con el scroll
+const threads = [...document.querySelectorAll(".thread")];
+threads.forEach(t => { t.style.setProperty("--len", Math.ceil(t.querySelector("path").getTotalLength())); t.dv = -1; });
+let threadsPinned = false;
+function drawThreads(){
+  if (threadsPinned) return;
+  threads.forEach(t => {
+    const r = t.getBoundingClientRect(); const d = clamp((innerHeight - r.top) / (innerHeight * .6), 0, 1);
+    const q = Math.round(d * 100) / 100; if (q !== t.dv){ t.dv = q; t.style.setProperty("--d", q); }
+  });
+}
+
+// ===== HERO: el video avanza con el scroll =====
+const VIDEO_URL = "assets/hero-scrub.mp4";
+const VIDEO_BYTES = 3417082;
+const heroEl = document.getElementById("hero"), stage = document.getElementById("stage"), video = document.getElementById("video");
+const posterEl = document.getElementById("poster"), ringfill = document.getElementById("ringfill"), cue = document.getElementById("cue");
+const bands = [...document.querySelectorAll(".band")].map(el => ({el, a:+el.dataset.a, b:+el.dataset.b, op:-1, k:-1}));
+const smooth = (p,e0,e1) => { const t = clamp((p-e0)/(e1-e0), 0, 1); return t*t*(3-2*t); };
+
+function rng(seed){ let s = seed >>> 0; return () => (s = (s*1664525 + 1013904223) >>> 0) / 4294967296; }
+document.querySelectorAll(".split").forEach((el,n) => {
+  const r = rng(7 + n), parts = [];
+  [...el.childNodes].forEach(node => {
+    if (node.nodeType === 3) node.textContent.split(/\s+/).filter(Boolean).forEach(w => parts.push(w));
+    else parts.push(node);
+  });
+  el.textContent = "";
+  parts.forEach((w,i) => {
+    const s = document.createElement("span"); s.className = "w";
+    s.style.setProperty("--th", (i / parts.length * .35 + r() * .05).toFixed(3));
+    if (typeof w === "string") s.textContent = w; else s.append(w);
+    el.append(s); if (i < parts.length - 1) el.append(" ");
+  });
+});
+
+let scrubOn = false;
+let loadK = 0; const loadStart = performance.now();
+function heroProgress(){ const range = heroEl.offsetHeight - innerHeight; return range > 0 ? clamp(-heroEl.getBoundingClientRect().top / range, 0, 1) : 0; }
+function updateCaptions(p){
+  bands.forEach((bd, idx) => {
+    const {a,b} = bd; const f = Math.min(.02, (b-a)/3);
+    let op = (idx === 0 ? 1 : smooth(p, a, a+f)) * (idx === bands.length-1 ? 1 : 1 - smooth(p, b-f, b));
+    let k = clamp((p - a) / Math.min(.025, (b-a)*.35), 0, 1);
+    if (idx === 0) k = Math.max(k, loadK);
+    op = Math.round(op*1000)/1000;
+    if (Math.abs(op - bd.op) > .004 || (op === 0 && bd.op !== 0) || (op === 1 && bd.op !== 1)){ bd.op = op; bd.el.style.opacity = op; bd.el.style.visibility = op < .01 ? "hidden" : "visible"; }
+    if (Math.abs(k - bd.k) > .008 || (k === 1 && bd.k !== 1) || (k === 0 && bd.k !== 0)){ bd.k = k; bd.el.style.setProperty("--k", k.toFixed(3)); }
+  });
+  const c = p < .04 ? "1" : "0"; if (cue.dataset.o !== c){ cue.dataset.o = c; cue.style.opacity = c === "1" ? ".85" : "0"; }
+}
+(function rampBand1(now){ loadK = Math.min(1, (now - loadStart) / 1400); if (scrubOn) updateCaptions(heroProgress()); if (loadK < 1) requestAnimationFrame(rampBand1); })(loadStart);
+
+let seekBusy = false, pendingTime = null;
+function requestSeek(t){ if (!video.duration) return; if (seekBusy){ pendingTime = t; return; } seekBusy = true; video.currentTime = t; }
+video.addEventListener("seeked", () => { seekBusy = false; if (pendingTime !== null){ const t = pendingTime; pendingTime = null; requestSeek(t); } });
+video.addEventListener("error", () => { seekBusy = false; pendingTime = null; stage.classList.remove("video-ready"); });
+const vt = p => p * Math.max(0, (video.duration || 0) - .05);
+
+let target = 0, shown = 0, rafId = null, lastTick = 0, heroOnScreen = true;
+function tick(now){
+  const dt = Math.min(100, now - (lastTick || now)); lastTick = now;
+  shown += (target - shown) * (1 - Math.pow(1 - .14, dt / 16.667));
+  if (Math.abs(target - shown) < .0005){ shown = target; rafId = null; lastTick = 0; } else rafId = requestAnimationFrame(tick);
+  requestSeek(vt(shown));
+  updateCaptions(shown);
+}
+function onScroll(){ target = heroProgress(); if (rafId === null && heroOnScreen) rafId = requestAnimationFrame(tick); }
+new IntersectionObserver(es => { heroOnScreen = es[0].isIntersecting; if (heroOnScreen && scrubOn) onScroll(); }).observe(heroEl);
+
+let heroInit = false;
+function initHeroOnce(){
+  if (heroInit) return; heroInit = true;
+  posterEl.style.backgroundImage = "url('assets/hero-poster.jpg')";
+  let started = false; const go = () => { if (started) return; started = true; loadHeroBlob().catch(failVideo); };
+  const im = new Image(); im.onload = go; im.onerror = go; im.src = "assets/hero-poster.jpg"; setTimeout(go, 4000);
+}
+async function loadHeroBlob(){
+  if (location.protocol === "file:") throw new Error("file");
+  const ctrl = new AbortController(); let wd = setTimeout(() => ctrl.abort(), 20000);
+  const res = await fetch(VIDEO_URL, {priority:"low", signal:ctrl.signal}); if (!res.ok) throw new Error("http " + res.status);
+  const total = Number(res.headers.get("Content-Length")) || VIDEO_BYTES;
+  const reader = res.body.getReader(); const chunks = []; let got = 0, last = 0;
+  for(;;){
+    const {done, value} = await reader.read(); if (done) break;
+    clearTimeout(wd); wd = setTimeout(() => ctrl.abort(), 20000);
+    chunks.push(value); got += value.length; const fr = Math.min(1, got/total); const now = performance.now();
+    if (now - last > 100 || fr === 1){ last = now; ringfill.style.setProperty("--ld", Math.round(126*(1-fr))); }
+  }
+  clearTimeout(wd); ringfill.style.setProperty("--ld", 0);
+  video.src = URL.createObjectURL(new Blob(chunks, {type:"video/mp4"})); video.load();
+  video.addEventListener("canplay", () => { requestSeek(vt(heroProgress())); stage.classList.add("video-ready"); setTimeout(swapCue, 500); }, {once:true});
+}
+function swapCue(){ const r = cue.querySelector(".ring"); if (r) r.outerHTML = '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="#e6c27a" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg>'; }
+function failVideo(){ swapCue(); stage.classList.add("video-failed"); }
+
+const GATES = [
+  "(max-width: 720px)",
+  "(orientation: portrait) and (max-width: 1024px)",
+  "(orientation: portrait) and (pointer: coarse)",
+  "(orientation: landscape) and (pointer: coarse) and (max-height: 560px)",
+  "(prefers-reduced-motion: reduce)"
+];
+function enableScrub(){ if (scrubOn) return; scrubOn = true; initHeroOnce(); addEventListener("scroll", onScroll, {passive:true}); bands.forEach(b => { b.op = -1; b.k = -1; }); unpinFinalStates(); updateCaptions(heroProgress()); onScroll(); }
+function disableScrub(){ if (!scrubOn) return; scrubOn = false; removeEventListener("scroll", onScroll); if (rafId !== null){ cancelAnimationFrame(rafId); rafId = null; } }
+function applyHeroMode(){ if (GATES.some(q => matchMedia(q).matches)) disableScrub(); else enableScrub(); }
+const MQLS = GATES.map(q => matchMedia(q)); MQLS.forEach(m => m.addEventListener("change", applyHeroMode));
+
+// nav sólida después del hero
+const nav = document.getElementById("nav"); let navSolid = null;
+function navState(){ const limit = scrubOn ? heroEl.offsetHeight - innerHeight * 1.05 : innerHeight * .6; const s = scrollY > limit; if (s !== navSolid){ navSolid = s; nav.classList.toggle("solid", s); } }
+
+// el sello: mantener presionado
+const signBtn = document.getElementById("signbtn"), sign = document.getElementById("sello"), hint = document.getElementById("signhint");
+let hold = 0, holding = false, holdRaf = null, holdLast = 0, signDone = false;
+function finishSign(){ signDone = true; hold = 1; signBtn.style.setProperty("--h", 1); sign.classList.add("done"); hint.textContent = "Empowered Latina"; }
+function holdTick(now){
+  const dt = Math.min(100, now - (holdLast || now)); holdLast = now;
+  hold = clamp(hold + (holding ? dt/1600 : -dt/900), 0, 1);
+  signBtn.style.setProperty("--h", hold.toFixed(3));
+  if (hold >= 1){ finishSign(); holdRaf = null; holdLast = 0; return; }
+  if (holding || hold > 0) holdRaf = requestAnimationFrame(holdTick); else { holdRaf = null; holdLast = 0; }
+}
+function startHold(e){ if (signDone) return; e.preventDefault(); holding = true; if (RM.matches){ finishSign(); return; } if (!holdRaf) holdRaf = requestAnimationFrame(holdTick); }
+const endHold = () => { holding = false; };
+signBtn.addEventListener("pointerdown", startHold);
+["pointerup","pointerleave","pointercancel"].forEach(ev => signBtn.addEventListener(ev, endHold));
+signBtn.addEventListener("keydown", e => { if ((e.key === " " || e.key === "Enter") && !e.repeat) startHold(e); });
+signBtn.addEventListener("keyup", endHold);
+signBtn.addEventListener("contextmenu", e => e.preventDefault());
+
+let pinnedSign = false;
+function pinToFinalStates(){ threadsPinned = true; threads.forEach(t => t.style.setProperty("--d", 1)); if (!signDone){ pinnedSign = true; finishSign(); } }
+function unpinFinalStates(){
+  if (threadsPinned){ threadsPinned = false; threads.forEach(t => { t.dv = -1; }); drawThreads(); }
+  if (pinnedSign){ pinnedSign = false; signDone = false; hold = 0; signBtn.style.setProperty("--h", 0); sign.classList.remove("done"); hint.textContent = "Presiona y no sueltes"; }
+}
+RM.addEventListener("change", e => { if (e.matches) pinToFinalStates(); else { unpinFinalStates(); applyHeroMode(); } });
+
+let pageTick = null;
+addEventListener("scroll", () => { if (pageTick) return; pageTick = requestAnimationFrame(() => { pageTick = null; navState(); drawThreads(); }); }, {passive:true});
+addEventListener("resize", navState);
+document.addEventListener("visibilitychange", () => document.body.classList.toggle("paused", document.hidden));
+
+applyHeroMode();
+if (RM.matches) pinToFinalStates(); else drawThreads();
+navState();
+</script>
+</body>
+</html>
